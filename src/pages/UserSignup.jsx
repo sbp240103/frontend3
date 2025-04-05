@@ -25,7 +25,7 @@ const UserSignup = () => {
       console.log('Email set in context:', email);
 
       // Send the user data to the backend
-      const response = await fetch('https://intern-backup-2.onrender.com/catalog/author/create', {
+      const response = await fetch('https://intern-backup-312.onrender.com/catalog/author/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const UserSignup = () => {
         <div>
           <img
             className="w-16 mb-10"
-            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3DWord%2Bprocessor&psig=AOvVaw2dkOv03NsgfPPd-8nR9qqz&ust=1743941268188000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwi3ldXP7cCMAxWvwTgGHQ-iNLMQjRx6BAgAEBk"
+            src="https://www.bing.com/images/search?view=detailV2&ccid=79MJUGS7&id=5C7FEC7A24C13F88A66DD97940D700E650D2B11D&thid=OIP.79MJUGS7ym67BLO2PDfjpAHaEq&mediaurl=https%3a%2f%2fwww.kindpng.com%2fpicc%2fm%2f368-3680049_word-processing-software-logo-hd-png-download.png&exph=541&expw=860&q=simple+word+processor+logo&simid=607986968720929023&FORM=IRPRST&ck=DA0E9C8282B5282C1022589BCFB68D07&selectedIndex=0&itb=0"
             alt=""
           />
           <p className="text-center">
