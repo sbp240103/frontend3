@@ -22,7 +22,7 @@ const Contact = () => {
         }
 
         // If not in localStorage, fetch it from the backend
-        const response = await fetch(`https://intern-backup-2.onrender.com/catalog/author/get-summary`, {
+        const response = await fetch(`https://intern-backup-312.onrender.com/catalog/author/get-summary`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const Contact = () => {
     setResult('Updating...');
 
     try {
-      const response = await fetch('https://intern-backup-2.onrender.com/catalog/author/update-summary', {
+      const response = await fetch('https://intern-backup-312.onrender.com/catalog/author/update-summary', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const Contact = () => {
 
   const onConvertToGoogleDoc = async () => {
     try {
-      const response = await fetch('https://intern-backup-2.onrender.com/google/create-doc', {
+      const response = await fetch('https://intern-backup-312.onrender.com/google/create-doc', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ const Contact = () => {
 
   const onUploadToDrive = async () => {
     try {
-      const response = await fetch('https://intern-backup-2.onrender.com/google/upload-doc', {
+      const response = await fetch('https://intern-backup-312.onrender.com/google/upload-doc', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
