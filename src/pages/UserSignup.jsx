@@ -25,7 +25,7 @@ const UserSignup = () => {
       console.log('Email set in context:', email);
 
       // Send the user data to the backend
-      const response = await fetch('http://localhost:3000/catalog/author/create', {
+      const response = await fetch('https://intern-backup-2.onrender.com/catalog/author/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const UserSignup = () => {
         <div>
           <img
             className="w-16 mb-10"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYQy-OIkA6In0fTvVwZADPmFFibjmszu2A0g&s"
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fsearch%3Fq%3DWord%2Bprocessor&psig=AOvVaw2dkOv03NsgfPPd-8nR9qqz&ust=1743941268188000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwi3ldXP7cCMAxWvwTgGHQ-iNLMQjRx6BAgAEBk"
             alt=""
           />
           <p className="text-center">
