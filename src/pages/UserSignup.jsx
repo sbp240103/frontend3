@@ -25,7 +25,7 @@ const UserSignup = () => {
       console.log('Email set in context:', email);
 
       // Send the user data to the backend
-      const response = await fetch('https://intern-backup-312.onrender.com/catalog/author/create', {
+      const response = await fetch('https://simple-word-processor.onrender.com/catalog/author/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
