@@ -22,8 +22,8 @@ const UserSignup = () => {
           Authorization: `Bearer ${credentialResponse.credential}`,
         },
         body: JSON.stringify({
-          name: name,
-          email: email,
+          name,
+          email,
           summary: `My name is ${name} and I signed up using Google.`,
         }),
       });
@@ -39,52 +39,61 @@ const UserSignup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center px-4">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
-        {/* Logo */}
-        <div className="flex justify-center mb-6">
-          <img
-            src="https://www.kindpng.com/picc/m/368-3680049_word-processing-software-logo-hd-png-download.png"
-            alt="Logo"
-            className="w-16 h-16"
-          />
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 flex items-center justify-center px-4">
+      <div className="bg-white shadow-2xl rounded-3xl overflow-hidden w-full max-w-4xl flex flex-col md:flex-row">
+        
+        {/* Left Image Section */}
+        <div className="md:w-1/2 bg-cover bg-center" 
+             style={{ backgroundImage: "url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80')" }}>
+          <div className="h-full w-full bg-black bg-opacity-30 flex items-center justify-center p-6">
+            <h1 className="text-white text-3xl md:text-4xl font-bold text-center leading-snug">
+              Write. Create. Share. <br /> All in One Place.
+            </h1>
+          </div>
         </div>
 
-        {/* Title */}
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-2">
-          Create Your Account
-        </h2>
-        <p className="text-center text-gray-500 mb-6">
-          Sign up to get started with our word processor.
-        </p>
-
-        {/* Google Sign-in */}
-        <GoogleOAuthProvider clientId="590577612365-ha7qrqb1ebd1v7mjv9ramlk73ctk9k10.apps.googleusercontent.com">
-          <div className="flex justify-center">
-            <GoogleLogin
-              onSuccess={handleSuccess}
-              onError={handleError}
-              size="large"
-              shape="pill"
-              width="250"
+        {/* Right Signup Card */}
+        <div className="md:w-1/2 p-8 flex flex-col justify-center">
+          <div className="flex justify-center mb-6">
+            <img
+              src="https://www.kindpng.com/picc/m/368-3680049_word-processing-software-logo-hd-png-download.png"
+              alt="Logo"
+              className="w-16 h-16"
             />
           </div>
-        </GoogleOAuthProvider>
 
-        {/* Login Link */}
-        <p className="text-center mt-6 text-gray-600">
-          Already have an account?{' '}
-          <Link to="/login" className="text-blue-600 hover:underline font-medium">
-            Login here
-          </Link>
-        </p>
+          <h2 className="text-2xl font-bold text-center text-gray-800 mb-3">
+            Join Our Community
+          </h2>
+          <p className="text-center text-gray-500 mb-8">
+            Sign up quickly with Google and start your creative journey today.
+          </p>
 
-        {/* Footer */}
-        <p className="text-[10px] text-gray-400 text-center mt-8">
-          This site is protected by reCAPTCHA and the{' '}
-          <span className="underline">Google Privacy Policy</span> and{' '}
-          <span className="underline">Terms of Service</span> apply.
-        </p>
+          <GoogleOAuthProvider clientId="590577612365-ha7qrqb1ebd1v7mjv9ramlk73ctk9k10.apps.googleusercontent.com">
+            <div className="flex justify-center">
+              <GoogleLogin
+                onSuccess={handleSuccess}
+                onError={handleError}
+                size="large"
+                shape="pill"
+                width="280"
+              />
+            </div>
+          </GoogleOAuthProvider>
+
+          <p className="text-center mt-8 text-gray-600">
+            Already with us?{' '}
+            <Link to="/login" className="text-indigo-600 hover:underline font-medium">
+              Log in here
+            </Link>
+          </p>
+
+          <p className="text-[10px] text-gray-400 text-center mt-6 leading-tight">
+            Protected by reCAPTCHA and the{' '}
+            <span className="underline">Google Privacy Policy</span> and{' '}
+            <span className="underline">Terms of Service</span> apply.
+          </p>
+        </div>
       </div>
     </div>
   );
