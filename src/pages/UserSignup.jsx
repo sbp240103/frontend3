@@ -56,7 +56,7 @@ const UserSignup = () => {
         <div className="md:w-1/2 p-8 flex flex-col justify-center">
           <div className="flex justify-center mb-6">
             <img
-              src="https://www.kindpng.com/picc/m/368-3680049_word-processing-software-logo-hd-png-download.png"
+              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fdiary-fountain-pen&psig=AOvVaw3Aa9GY3EZCjXZnju2K8sk9&ust=1755173461826000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOjTt__gh48DFQAAAAAdAAAAABAV"
               alt="Logo"
               className="w-16 h-16"
             />
@@ -80,19 +80,6 @@ const UserSignup = () => {
               />
             </div>
           </GoogleOAuthProvider>
-
-          <p className="text-center mt-8 text-gray-600">
-            Already with us?{' '}
-            <Link to="/login" className="text-indigo-600 hover:underline font-medium">
-              Log in here
-            </Link>
-          </p>
-
-          <p className="text-[10px] text-gray-400 text-center mt-6 leading-tight">
-            Protected by reCAPTCHA and the{' '}
-            <span className="underline">Google Privacy Policy</span> and{' '}
-            <span className="underline">Terms of Service</span> apply.
-          </p>
         </div>
       </div>
     </div>
